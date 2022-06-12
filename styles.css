@@ -97,3 +97,9 @@ footer {
   font-family: "Arvo", cursive;
   text-shadow: 3px 0 #da0463;
 }
+@media screen and (min-width: 280px) and (max-width: 1200px) {
+  .wrapper {
+    margin-top: 50%;
+    width: 100%;
+  }
+}
