@@ -3,7 +3,7 @@
 window.addEventListener("load", function () {
   setTimeout(function modal(event) {
     document.querySelector(".mod_Box").style.display = "block";
-  }, 1000);
+  }, 2000);
 });
 
 document.querySelector("#modal_button").addEventListener("click", function () {
