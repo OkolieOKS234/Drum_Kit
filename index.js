@@ -1,4 +1,5 @@
 // Modal box appearing on load
+navigator.virtualKeyboard.overlaysContent = true;
 window.addEventListener("load", function () {
   setTimeout(function modal(event) {
     document.querySelector(".mod_Box").style.display = "block";
