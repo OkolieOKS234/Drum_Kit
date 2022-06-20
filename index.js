@@ -1,49 +1,56 @@
+// creating a variable check the length of all the buttons available
 var buttonslist = document.querySelectorAll("button").length;
 
+//  loop through all the list of buttons and make it listen to a click for each button
 for (var i = 0; i < buttonslist; i++) {
-  document.querySelectorAll("button")[0].addEventListener("click", function () {
-    let audio = new Audio("./sounds/snare.mp3");
-    audio.play();
-  });
-  document.querySelectorAll("button")[1].addEventListener("click", function () {
-    let audio = new Audio("./sounds/crash.mp3");
-    audio.play();
-  });
-  document.querySelectorAll("button")[2].addEventListener("click", function () {
-    let audio = new Audio("./sounds/kick-bass.mp3");
-    audio.play();
-  });
-  document.querySelectorAll("button")[3].addEventListener("click", function () {
-    let audio = new Audio("./sounds/tom-1.mp3");
-    audio.play();
-  });
-
-  document.querySelectorAll("button")[4].addEventListener("click", function () {
-    let audio = new Audio("./sounds/tom-2.mp3");
-    audio.play();
-  });
-
-  document.querySelectorAll("button")[5].addEventListener("click", function () {
-    let audio = new Audio("./sounds/tom-3.mp3");
-    audio.play();
-  });
-  document.querySelectorAll("button")[6].addEventListener("click", function () {
-    let audio = new Audio("./sounds/tom-4.mp3");
-    audio.play();
+  document.querySelectorAll("button")[i].addEventListener("click", function () {
+    var buttonInnerHtml = this.innerHTML;
+    makeSound(buttonInnerHtml);
   });
 }
 
-// while block style code
-// var i = 0;
+document.addEventListener("keydown", function (event) {
+  makeSound(event.key);
+});
 
-// while (i < document.querySelectorAll("button").length) {
-//   document.querySelectorAll("button")[i].addEventListener("click", function () {
-//     alert("Hi bro");
-//   });
-//   i++;
-// }
-// Anonymous function
+function makeSound(key) {
+  switch (key) {
+    case "w":
+      var snare = new Audio("./sounds/snare.mp3");
+      snare.play();
+      break;
+    case "a":
+      var crash = new Audio("./sounds/crash.mp3");
+      crash.play();
+      break;
 
-// document.querySelector("button").addEventListener("click", function () {
-//   alert("Hello, David");
-// });
+    case "s":
+      var kickbass = new Audio("./sounds/kick-bass.mp3");
+      kickbass.play();
+
+      break;
+
+    case "d":
+      var tom1 = new Audio("./sounds/tom-1.mp3");
+      tom1.play();
+
+      break;
+
+    case "j":
+      var tom2 = new Audio("./sounds/tom-2.mp3");
+      tom2.play();
+      break;
+
+    case "k":
+      var tom3 = new Audio("./sounds/tom-3.mp3");
+      tom3.play();
+      break;
+    case "l":
+      var tom4 = new Audio("./sounds/tom-4.mp3");
+      tom4.play();
+      break;
+
+    default:
+      console.error("Crazy");
+  }
+}
