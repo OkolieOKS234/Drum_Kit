@@ -51,6 +51,7 @@ h1 {
 .l {
   background-image: url("./images/tom4.png");
 }
+/* end of various sounds */
 
 .game-over {
   background-color: red;
@@ -127,9 +128,51 @@ footer {
   font-family: "Arvo", cursive;
   text-shadow: 3px 0 #da0463;
 }
+/* modal box */
+.mod_Box {
+  /* display: none; */
+  color: #ffff;
+  display: none;
+  width: 30%;
+  text-align: center;
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  height: 30%;
+  border-radius: 20px;
+  /* background: url(./images/drumsetlarge.jpg); */
+  background-color: #ffffff;
+  color: #283149;
+  padding: 5%;
+  line-height: 2em;
+  word-spacing: 0.2em;
+}
+.mod_Box > #modal_button {
+  background-color: blue;
+  border-radius: 50%;
+  position: relative;
+  left: 40%;
+  width: 35px;
+  font-size: x-large;
+}
+
+.mod_Box > #modal_button:hover {
+  cursor: pointer;
+}
+
+/* end of modal box */
+
+/* Responsiveness */
 @media screen and (min-width: 280px) and (max-width: 1200px) {
   .wrapper {
     margin-top: 50%;
     width: 100%;
+  }
+  .mod_Box {
+    display: flex;
+    width: 100%;
+    height: 60%;
+    position: absolute;
+    left: 0px;
   }
 }

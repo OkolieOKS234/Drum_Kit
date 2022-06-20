@@ -1,3 +1,15 @@
+// Modal box appearing on load
+window.addEventListener("load", function () {
+  setTimeout(function modal(event) {
+    document.querySelector(".mod_Box").style.display = "block";
+  }, 2000);
+});
+
+document.querySelector("#modal_button").addEventListener("click", function () {
+  document.querySelector(".mod_Box").style.display = "none";
+});
+// end of modal box
+
 // creating a variable check the length of all the buttons available
 var buttonslist = document.querySelectorAll("button").length;
 
@@ -9,10 +21,12 @@ for (var i = 0; i < buttonslist; i++) {
   });
 }
 
+// add a listener for a keypressed on keyboard
 document.addEventListener("keydown", function (event) {
   makeSound(event.key);
 });
 
+// conditional if each of w,a,s,d, j, k, l is pressed
 function makeSound(key) {
   switch (key) {
     case "w":
