@@ -3,7 +3,7 @@
 window.addEventListener("load", function () {
   setTimeout(function modal(event) {
     document.querySelector(".mod_Box").style.display = "block";
-  }, 2000);
+  }, 100);
 });
 
 document.querySelector("#modal_button").addEventListener("click", function () {
@@ -77,5 +77,5 @@ function buttonAnimation(currentKey) {
 
   setTimeout(function () {
     activeButton.classList.remove("pressed");
-  }, 10);
+  }, 100);
 }
